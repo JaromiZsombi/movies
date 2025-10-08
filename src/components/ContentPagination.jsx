@@ -9,7 +9,7 @@ export const ContentPagination = ({page, setPage}) => {
         }
   return (
     <Stack spacing={2}>
-      <Pagination count={10} page={page} onChange={handleChange} />
+      <Pagination count={35} page={page} onChange={handleChange} />
     </Stack>
   )
 }
