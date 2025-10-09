@@ -1,5 +1,5 @@
 import React from 'react'
-import { img_500 } from '../utils'
+import { img_500, img_no } from '../utils'
 
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -14,7 +14,7 @@ export const MyCard = ({poster_path, original_title, release_date, vote_average}
       <CardMedia
         sx={{backgroundSize:"cover", backgroundRepeat:"no-repeat", backgroundPosition:"center", userSelect:"none"}}
         height="auto" width="auto" component="img"
-        image={img_500+poster_path}
+        image={poster_path? img_500+poster_path : img_no}
         title={original_title}
       />
       <div className='rating'>{Math.round(vote_average*10)/10}</div>
