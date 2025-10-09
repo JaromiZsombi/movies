@@ -8,8 +8,6 @@ export const Genres = ({type, selectedGenres, setSelectedGenres}) => {
     const {data, isError, isLoading}=useQuery({queryKey:['genres', type], queryFn:getGenres})
     data && console.log("Data genres", data)
 
-    console.log(selectedGenres)
-
   return (
     <Stack direction='row' flexWrap='wrap' justifyContent='center'>
         {data && data.genres.map(obj=>

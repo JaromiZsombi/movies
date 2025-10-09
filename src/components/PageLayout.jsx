@@ -17,7 +17,7 @@ export const PageLayout = ({title, children, page, setPage, type, selectedGenres
         WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent',
         p:'1rem'
         }}>{title}</Typography>
-        <Genres type={type} selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres}/>
+        {title!="Search Page" && <Genres type={type} selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres}/>}
         <Box>{children}</Box>
         
         {/*Oldallapozó */}
