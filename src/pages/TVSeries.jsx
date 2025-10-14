@@ -18,7 +18,7 @@ export const TVSeries = () => {
       >
         <Grid sx={{ display: 'flex', flexWrap: 'wrap', gap: "10px", justifyContent: 'center' }}>
           {data && data.results.map(obj =>
-            <MyCard key={obj.id} original_title={obj.original_name} release_date={obj.first_air_date} {...obj} />
+            <MyCard key={obj.id} original_title={obj.original_name} title={obj.name} release_date={obj.first_air_date} {...obj}/>
           )}
         </Grid>
 
