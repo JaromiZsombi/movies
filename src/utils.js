@@ -22,7 +22,6 @@ export const getGenres = async ({ queryKey }) => {
     console.log(queryKey)//2 elemes tömb
 
     const url = urlGenres + queryKey[1] + "/list?api_key=" + import.meta.env.VITE_TMDB_API_KEY
-    console.log(url);
 
     const resp = await axios.get(url)
     return resp.data
@@ -41,3 +40,8 @@ export const getSearchedData = async ({ queryKey }) => {
 export const img_300 = 'https://image.tmdb.org/t/p/w300';
 export const img_500 = 'https://image.tmdb.org/t/p/w500';
 export const img_no = 'https://www.movienewz.com/img/films/poster-holder.jpg'
+
+export const getDetailsData=async ({queryKey})=>{
+    const resp = await axios.get(queryKey[1])
+    return resp.data
+}

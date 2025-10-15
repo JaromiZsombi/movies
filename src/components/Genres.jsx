@@ -6,7 +6,6 @@ import { SingleChip } from './SingleChip'
 
 export const Genres = ({type, selectedGenres, setSelectedGenres}) => {
     const {data, isError, isLoading}=useQuery({queryKey:['genres', type], queryFn:getGenres})
-    data && console.log("Data genres", data)
 
   return (
     <Stack direction='row' flexWrap='wrap' justifyContent='center'>

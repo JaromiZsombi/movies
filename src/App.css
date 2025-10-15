@@ -31,3 +31,20 @@
 .MuiPaginationItem-root.Mui-selected{
     color: pink!important;
 }
+.slick-list{
+
+}
+button.slick-arrow{
+    
+}
+.carousel_img{
+    width: 100px;
+    background-color: red;
+}
+
+.actors{
+    display: flex ! important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

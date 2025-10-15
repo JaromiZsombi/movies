@@ -7,25 +7,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { useState } from 'react';
-import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
+import { MyModal } from './MyModal';
 
-export const MyCard = ({ poster_path, original_title, release_date, vote_average, title, backdrop_path, overview, type }) => {
+export const MyCard = ({ id, poster_path, original_title, release_date, vote_average, type}) => {
 
-  const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
-  };
-
-  const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
+  const [open, setOpen] = React.useState(false);
   const handleClose = () => setOpen(false);
 
   return (
@@ -46,29 +33,9 @@ export const MyCard = ({ poster_path, original_title, release_date, vote_average
             {release_date}
           </Typography>
         </CardContent>
+        <MyModal id={id} handleClose={handleClose} open={open} setOpen={setOpen} type={type}/>
       </Card>
 
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <CardMedia
-            sx={{ backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center", userSelect: "none" }}
-            height="auto" width="auto" component="img"
-            image={backdrop_path ? img_500 + backdrop_path : img_no}
-            title={original_title}
-          />
-          <Typography variant="h6" component="h2">
-           <b>{title}</b>  ({release_date})
-          </Typography>
-          <Typography sx={{ mt: 2 }}>
-            {overview}
-          </Typography>
-        </Box>
-      </Modal>
     </div>
     /*Kártya...*/
   )
