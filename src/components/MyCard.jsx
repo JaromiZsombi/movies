@@ -16,9 +16,9 @@ export const MyCard = ({ id, poster_path, original_title, release_date, vote_ave
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
-      <Card sx={{ position: "relative", width: 345, bgcolor: "#334155", color: "white" }}>
-        <CardMedia onClick={handleOpen}
+    <div className='cardSizing cardShadow'>
+      <Card className='cardSizing' sx={{ position: "relative", width: 345, bgcolor: "#334155ff", color: "white" }}>
+        <CardMedia onClick={handleOpen} 
           sx={{ backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center", userSelect: "none" }}
           height="auto" width="auto" component="img"
           image={poster_path ? img_500 + poster_path : img_no}

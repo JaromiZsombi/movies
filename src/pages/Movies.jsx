@@ -18,7 +18,7 @@ export const Movies = () => {
       <PageLayout title="Movies" page={page} setPage={setPage} type="movie" 
         selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres}
       >
-        <Grid sx={{display:'flex', flexWrap:'wrap', gap:"10px", justifyContent:'center'}}>
+        <Grid sx={{display:'flex', flexWrap:'wrap', gap:"10px", justifyContent:'center' }}>
           {data && data.results.map(obj=>
             <MyCard key={obj.id} {...obj} type='movie'/>
           )}

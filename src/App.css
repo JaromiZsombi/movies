@@ -10,8 +10,8 @@
 .rating{
     position: absolute;
     border-radius: 50%;
-    background-color: #94a3b8;
-    border: 1px solid white;
+    background-color: yellow;
+    border: 1px solid black;
     width: 40px;
     height: 40px;
     padding: 5px;
@@ -20,10 +20,7 @@
     align-items: center;
     top: 75%;
     right: 0%;
-    
-    
-    
-    
+    color: black;
 }
 .MuiPaginationItem-root{
     color: white!important;
@@ -31,15 +28,19 @@
 .MuiPaginationItem-root.Mui-selected{
     color: pink!important;
 }
-.slick-list{
 
+.carousel_img{
+    width: 100px!important;
 }
-button.slick-arrow{
+
+.cardShadow:hover{
+    transition: 0.2s;
+    box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.79);
     
 }
-.carousel_img{
-    width: 100px;
-    background-color: red;
+.cardSizing:hover{
+    transition: 0.2s;
+    background-color: rgb(35, 45, 61)!important;
 }
 
 .actors{
@@ -47,4 +48,42 @@ button.slick-arrow{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.modalSizing{
+    max-height: 100%!important;
+}
+.modalImageSizing{
+    max-height: 500px!important;
+}
+
+@media only screen and (max-width: 350px) {
+    .cardSizing{
+        max-width: 100% ! important;
+        height: auto !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .carouselBox{
+        font-size: 10px;
+        gap: 10px;
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .carousel_img{
+        width: 50px!important;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .modalSizing{
+        max-width: 100% ! important;
+        justify-content: center !important;
+        align-items: center !important;
+    }   
+    
 }

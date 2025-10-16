@@ -11,6 +11,7 @@ export const ShowTrailer=({id, type})=> {
 
   return (
     <Button
+      className='trailerButton'
       variant="contained"
       startIcon={<FaYoutube color='red' />}
       href={data && data?.results && data.results.length > 0 ? `https://www.youtube.com/watch?v=${data?.results[0].key}` : img_no}
