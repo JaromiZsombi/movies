@@ -1,1 +1,1 @@
-URL: movies67.netlify.app
+URL: https://movies67.netlify.app/
